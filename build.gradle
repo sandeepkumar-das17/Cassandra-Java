@@ -55,6 +55,9 @@ dependencies {
   compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.5'
 	compile group: 'org.apache.cassandra', name: 'cassandra-all', version: '3.11.0'
 
+// Use below to include customer jars
+runtime files('libs/mnist-tools.jar', 'libs/gson-2.2.4.jar')
+    runtime fileTree(dir: 'libs', include: '*.jar')
     // Use JUnit test framework
     //testImplementation 'junit:junit:4.12'
 }
